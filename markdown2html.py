@@ -6,6 +6,8 @@ import markdown
 
 
 def markdown2html(markdown_file, html_file):
+    """script to convert markdown file
+    to corresponding html"""
     with open(markdown_file, 'r') as file:
         markdown_text = file.read()
 
