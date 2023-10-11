@@ -14,12 +14,12 @@ def markdown2html(markdown_file, html_file):
     with open(html_file, 'w') as f:
         f.write(html_output)
         f.write("\n")
-    
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
+        print("Usage: ./markdown2html.py README.md README.html",
+              file=sys.stderr)
         exit(1)
 
     markdown_file = sys.argv[1]
