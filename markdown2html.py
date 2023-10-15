@@ -34,3 +34,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
     markdown2html(markdown_file, html_file)
+
+    sys.exit(0)
