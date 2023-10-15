@@ -24,13 +24,13 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: ./markdown2html.py README.md README.html",
               file=sys.stderr)
-        exit(1)
+        sys.exit(1)
 
     markdown_file = sys.argv[1]
     html_file = sys.argv[2]
 
     if not os.path.exists(markdown_file):
         sys.stderr.write("Missing {}\n".format(markdown_file))
-        exit(1)
+        sys.exit(1)
 
     markdown2html(markdown_file, html_file)
