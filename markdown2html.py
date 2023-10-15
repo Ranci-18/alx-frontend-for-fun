@@ -14,14 +14,14 @@ def markdown2html(markdown_file, html_file):
         sys.exit(1)
 
     # Read the contents of the markdown file
-    with open(markdown_file, encoding='utf-8') as file:
+    with open(markdown_file, mode='r', encoding='utf-8') as file:
         markdown_text = file.read()
 
     # Convert the contents to html
     html_output = markdown.markdown(markdown_text)
 
     # Then write the html content to the html file
-    with open(html_file, encoding='utf-8') as f:
+    with open(html_file, mode='w', encoding='utf-8') as f:
         f.write(html_output)
         f.write("\n")
 
