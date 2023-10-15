@@ -10,6 +10,10 @@ import markdown
 def markdown2html(markdown_file, html_file):
     """script to convert markdown file
     to corresponding html"""
+    if not os.path.exists(markdown_file):
+        sys.stderr.write("Missing {}\n".format(markdown_file))
+        sys.exit(1)
+
     with open(markdown_file, 'r') as file:
         markdown_text = file.read()
 
@@ -28,10 +32,6 @@ if __name__ == "__main__":
 
     markdown_file = sys.argv[1]
     html_file = sys.argv[2]
-
-    if not os.path.exists(markdown_file):
-        sys.stderr.write("Missing {}\n".format(markdown_file))
-        sys.exit(1)
 
     markdown2html(markdown_file, html_file)
 
