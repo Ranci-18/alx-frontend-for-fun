@@ -1,0 +1,59 @@
+.toggle {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+.toggle-inner {
+    content: "";
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid rgb(124, 117, 117);
+    background-color: rgb(230, 227, 227);
+}
+
+.toggle-switch {
+    content: "";
+    width: 65px;
+    height: 65px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 2px solid rgb(124, 117, 117);
+    position: relative;
+    top: -60px;
+    cursor: pointer;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+    background-color: rgb(179, 41, 41);
+    
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+    transform: translateX(100px);
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner::before {
+    content: "Yes";
+    color: white;
+    font-size: 2rem;
+    position: relative;
+    left: 30px;
+    top: 5px;
+    font-weight: bolder;
+}
+
+.toggle-cb:not(:checked) + .toggle-label .toggle-switch::after {
+    content: "No";
+    color: rgb(202, 197, 197);
+    font-size: 2rem;
+    font-weight: lighter;
+    position: relative;
+    left: 90px;
+    top: 12.5px;
+}
+
+.toggle-cb {
+    display: none;
+}
