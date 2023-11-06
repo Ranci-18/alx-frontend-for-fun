@@ -9,7 +9,7 @@
     width: 150px;
     height: 50px;
     border-radius: 50px;
-    border: 2px solid rgb(124, 117, 117);
+    border: 2px solid rgb(209, 204, 204);
     background-color: rgb(230, 227, 227);
 }
 
@@ -19,7 +19,7 @@
     height: 65px;
     background-color: #fff;
     border-radius: 50px;
-    border: 2px solid rgb(124, 117, 117);
+    border: 2px solid rgb(209, 204, 204);
     position: relative;
     top: -60px;
     cursor: pointer;
