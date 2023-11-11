@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --menu-line-height: 2px;
+    --menu-line-width: 20px;
+    --menu-line-color: #fff;
+    --menu-background-color: rgb(178, 53, 53);
+    --menu-gap: 10px;
+    --container-width: 2.5rem;
+    --container-height: 2.5rem;
+    --top: 10px;
+    --left: 10px; 
+    --animation-timing: 200ms ease-out;
+}
+
+/* NORMAL STYLING */
+.menu {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-open {
+    display: none;
+}
+
+.menu-open-button {
+    position: relative;
+    top: 0.1em;
+    background-color: var(--menu-background-color);
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 0.85em;
+    margin: 0 0.2em;
+}
+
+.menu-open-button:hover {
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: 0.1s ease-in-out;
+    padding: 1.15em;
+    position: relative;
+    top: 0.1em
+}
+
+.menu-open-button > .menu-line {
+    display: block;
+    width: var(--menu-line-width);
+    height: var(--menu-line-height);
+    background-color: var(--menu-line-color);
+    margin: 3px 0;
+}
+
+
+.menu-item {
+    margin: 0.3em 0.25em;
+    background-color: var(--menu-background-color);
+    width: var(--container-width);
+    height: var(--container-height);
+    border-radius: 50%;
+}
+
+.menu-item:hover {
+    background-color: #fff;
+}
+
+.menu-item:hover > .fa {
+    color: var(--menu-background-color);
+    transition: 200ms ease-in;
+}
+
+.fa {
+    padding: 0.75em;
+    color: #fff;
+}
+
+/* ANIMATIONS */
+.menu-open:not(:checked) ~ .menu-item {
+    height: 0;
+    opacity: 0;
+    transition: var(--animation-timing);
+}
+
+.menu-open:checked ~ .menu-open-button {
+    width: var(--container-width);
+    height: var(--container-height);
+    border-radius: 50%;
+    padding: 0.67em;
+}
+
+.menu-open:checked + .menu-open-button > .menu-line-2 {
+    display: none;
+}
+
+.menu-open:checked + .menu-open-button > .menu-line-3 {
+    width: 15px;
+    position: relative;
+    bottom: 6%;
+    left: 10%;
+    transform: rotate(-45deg);
+    
+}
+
+.menu-open:checked + .menu-open-button > .menu-line-1 {
+    width: 15px;
+    position: relative;
+    top: 19%;
+    left: 10%;
+    transform: rotate(45deg);
+}
