@@ -1,0 +1,13 @@
+/* sass mixins */
+@mixin set_margins($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+body {
+    @include set_margins(10px, 10px);
+}
+
+div {
+    @include set_margins(15px, 15px);
+}
